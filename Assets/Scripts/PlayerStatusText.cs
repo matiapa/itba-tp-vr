@@ -15,6 +15,7 @@ public class PlayerStatusText : MonoBehaviour
 
     public void AddAnnouncement(string text)
     {
+        Debug.Log("displaying text:" + text);
         _textMeshPro.text = _textMeshPro.text + "\n" + text;
     }
     
