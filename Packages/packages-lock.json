@@ -1,5 +1,49 @@
 {
   "dependencies": {
+    "com.meta.xr.sdk.interaction": {
+      "version": "file:C:/Users/matig/Downloads/com.meta.xr.sdk.interaction-56.0.0-preview.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.6",
+        "com.unity.ugui": "1.0.0"
+      }
+    },
+    "com.meta.xr.sdk.interaction.ovr": {
+      "version": "file:C:/Users/matig/Downloads/com.meta.xr.sdk.interaction.ovr-56.0.0-preview.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.meta.xr.sdk.interaction": "56.0.0-preview",
+        "com.meta.xr.sdk.utilities": "56.0.0-preview"
+      }
+    },
+    "com.meta.xr.sdk.interaction.ovr.samples": {
+      "version": "file:C:/Users/matig/Downloads/com.meta.xr.sdk.interaction.ovr.samples-56.0.0-preview.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {
+        "com.meta.xr.sdk.interaction.ovr": "56.0.0-preview",
+        "com.meta.xr.sdk.sharedassets": "56.0.0-preview"
+      }
+    },
+    "com.meta.xr.sdk.sharedassets": {
+      "version": "56.0.0-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.textmeshpro": "3.0.6",
+        "com.unity.ugui": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.meta.xr.sdk.utilities": {
+      "version": "56.0.0-preview",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.collab-proxy": {
       "version": "2.0.4",
       "depth": 0,
@@ -154,6 +198,15 @@
         "com.unity.modules.vr": "1.0.0",
         "com.unity.modules.xr": "1.0.0",
         "com.unity.xr.legacyinputhelpers": "2.1.7"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.xr.oculus": {
+      "version": "3.3.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "4.2.0"
       },
       "url": "https://packages.unity.com"
     },
