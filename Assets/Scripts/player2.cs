@@ -19,6 +19,7 @@ public class player2 : MonoBehaviour
     {
         vehicleController.UpdateSteeringFixedUpdate(
             Input.GetAxis("Vertical"),
-            Input.GetAxis("Horizontal"));
+            Input.GetAxis("Horizontal"),
+            Input.GetButton("Jump"));
     }
 }

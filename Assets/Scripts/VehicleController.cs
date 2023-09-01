@@ -11,15 +11,25 @@ public class VehicleController : MonoBehaviour
         public bool motor;
         public bool steering;
     }
+
+    public float breakTorque;
     
     public List<AxleInfo> axleInfos;
     public float maxMotorTorque;
     public float maxSteeringAngle;
     
     //from: https://docs.unity3d.com/Manual/WheelColliderTutorial.html
-    public void UpdateSteeringFixedUpdate(float motorTorque, float steering)
+    public void UpdateSteeringFixedUpdate(float motorTorque, float steering, bool breaks)
     {
         foreach (AxleInfo axleInfo in axleInfos) {
+            if (breaks)
+            {
+                Debug.Log("break");
+                axleInfo.leftWheel.brakeTorque = breakTorque;
+                axleInfo.rightWheel.brakeTorque = breakTorque;
+                break;
+            }
+            
             if (axleInfo.steering) {
                 axleInfo.leftWheel.steerAngle = steering * maxSteeringAngle;
                 axleInfo.rightWheel.steerAngle = steering * maxSteeringAngle;
@@ -31,4 +41,8 @@ public class VehicleController : MonoBehaviour
         }
         //TODO: update visuals
     }
+    
+    
+    
+    
 }
